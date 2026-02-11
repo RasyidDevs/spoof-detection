@@ -174,6 +174,7 @@ def predict(uploaded_file: UploadedFile) -> dict:
     # │    - You can use PIL, torch, tf, onnx, etc.              │
     # └──────────────────────────────────────────────────────────┘
     img = Image.open(BytesIO(uploaded_file.getvalue()))
+    img = img.convert("RGB")
     img = img.resize((224, 224))
 
     img_np = np.array(img).astype("float32") / 255.0
