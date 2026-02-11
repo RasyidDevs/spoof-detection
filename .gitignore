@@ -1,0 +1,22 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Notebooks
+notebooks/
+
+# Data folder
+data/
+
+# Images
+*.jpg
+*.jpeg
+*.png
+
+# Other formats
+*.vif
+
+# OS files
+.DS_Store
+Thumbs.db
