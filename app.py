@@ -7,7 +7,6 @@ import streamlit as st
 from ui.layout import render_page
 from ui.state import init_session_state
 
-
 # ── Page Configuration ──────────────────────────────────────────────
 st.set_page_config(
     page_title="Image Authenticity Detector",
@@ -18,6 +17,7 @@ st.set_page_config(
 
 
 def main():
+
     """Entry point for the Streamlit application."""
     init_session_state()
     render_page()

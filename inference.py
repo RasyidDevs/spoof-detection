@@ -143,7 +143,7 @@ mymodel = FullModel(
     fusion=BiCrossAttentionFusion(C=256, nheads=16, attn_dropout=0.0),
     head=ClassifierHead(in_dim=512, num_classes=2, use_bn=True, p=0.2)
 )
-mymodel.load_state_dict(torch.load("models/best_model.pth", map_location=device)["model_state_dict"])
+mymodel.load_state_dict(torch.load("models/best_rasyid_2.pth", map_location=device)["model_state_dict"])
 mymodel.eval()
 def predict(uploaded_file: UploadedFile) -> dict:
     """

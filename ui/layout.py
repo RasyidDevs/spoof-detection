@@ -25,7 +25,6 @@ from ui.image_utils import (
 from ui.state import reset_results, set_processing, add_result
 from inference import predict
 
-
 # ── Rendering Functions ──────────────────────────────────────────────
 
 
@@ -119,14 +118,13 @@ def _run_analysis(files):
 
     progress_bar = st.progress(0, text="Initializing analysis…")
     total = len(files)
-
     for idx, f in enumerate(files):
         progress_bar.progress(
             (idx) / total,
             text=f"Analyzing {f.name} ({idx + 1}/{total})…",
         )
 
-        result = predict(f)
+        result = predict(uploaded_file=f)
         add_result(f.name, result)
 
     progress_bar.progress(1.0, text="✅ Analysis complete!")

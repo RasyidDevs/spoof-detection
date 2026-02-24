@@ -20,3 +20,7 @@ data/
 # OS files
 .DS_Store
 Thumbs.db
+
+models/best_thoriq.pt
+models/model_thoriq_2.pt
+models/best_rasyid.pth
